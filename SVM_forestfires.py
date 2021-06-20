@@ -28,6 +28,11 @@ X_test=scale(X_test)
 model=SVC(kernel='linear')
 model.fit(X_train,y_train)
 y_pred=model.predict(X_test)
+###Matplot Lib for 1st model
+import matplotlib.pylab as plt
+plt.scatter(x=X,y= y,color= 'red');plt.plot(X,y_pred,color ='black')
+py.plot(X,y_pred,color = 'black')
+plt.title('1st Model')
 
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 accuracy_score(y_test,y_pred)
@@ -39,6 +44,10 @@ classification_report(y_test,y_pred)
 model2=SVC(kernel='rbf')
 model2.fit(X_train,y_train)
 y_pred2=model2.predict(X_test)
+
+plt.scatter(x=X,y= y,color= 'red');plt.plot(X,y_pred2,color ='black')
+py.plot(X,y_pred2,color = 'black')
+plt.title('2nd Model')
 
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 accuracy_score(y_test,y_pred2)
