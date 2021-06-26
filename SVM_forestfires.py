@@ -34,6 +34,13 @@ plt.scatter(x=X,y= y,color= 'red');plt.plot(X,y_pred,color ='black')
 py.plot(X,y_pred,color = 'black')
 plt.title('1st Model')
 
+
+
+py.hist(x)
+py.boxplot(x,0,"rs",0)
+py.hist(y_pred)
+py.boxplot(y_pred,0,"rs",0)
+
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 accuracy_score(y_test,y_pred)
 confusion_matrix(y_test,y_pred)
@@ -49,6 +56,12 @@ plt.scatter(x=X,y= y,color= 'red');plt.plot(X,y_pred2,color ='black')
 py.plot(X,y_pred2,color = 'black')
 plt.title('2nd Model')
 
+
+
+py.hist(x)
+py.boxplot(x,0,"rs",0)
+py.hist(y_pred2)
+py.boxplot(y_pred2,0,"rs",0)
 from sklearn.metrics import accuracy_score,confusion_matrix,classification_report
 accuracy_score(y_test,y_pred2)
 confusion_matrix(y_test,y_pred2)
